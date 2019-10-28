@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">MyCheckinsFinal</string>
+    <string name="crime_title_hint">Enter a title for the checkins.</string>
+    <string name="crime_title_label">Title</string>
+    <string name="crime_details_hint">Enter details for the checkins.</string>
+    <string name="crime_details_label">Details</string>
+    <string name="crime_place_hint">Enter a place for the checkins.</string>
+    <string name="crime_place_label">Place</string>
+
+    <string name="crime_solved_label">Solved</string>
+    <string name="date_picker_title">Date of checkins:</string>
+    <string name="new_crime">New Crime</string>
+    <string name="show_subtitle">Show Subtitle</string>
+    <string name="hide_subtitle">Hide Subtitle</string>
+    <string name="subtitle_format">%1$d checkins</string>
+    <string name="crime_suspect_text">Choose Suspect</string>
+    <string name="crime_report_text">Send Crime Report</string>
+    <string name="crime_report">%1$s!
+ The checkins was discovered on %2$s. %3$s, and %4$s
+ </string>
+    <string name="crime_report_solved">The case is solved</string>
+    <string name="crime_report_unsolved">The case is not solved</string>
+    <string name="crime_report_no_suspect">there is no suspect.</string>
+    <string name="crime_report_suspect">the suspect is %s.</string>
+    <string name="crime_report_subject">CriminalIntent Crime Report</string>
+    <string name="send_report">Send checkins report via</string>
+    <string name="delete_crime">Delete Crime</string>
+
+
+    <string name="title_activity_maps">Map</string>
+    <string name="map_button">Map</string>
+    <string name="location_title">Map Location</string>
+    <string name="location_text">lat: %1$f\nlong: %2$f</string>
+    <string name="show_map_text">Show Map</string>
+    <string name="google_maps_key">AIzaSyCpOCxsPbl-tXlRIV4nzhnRibIYymdznfY"</string>>
+</resources>
