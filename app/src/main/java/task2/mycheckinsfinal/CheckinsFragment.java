@@ -328,45 +328,6 @@ public class CheckinsFragment extends Fragment {
         return v;
     }
 
-    //stuff for delete crime
-    /*@Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.remove_crime:
-                UUID crimeId = (UUID) getArguments().getSerializable(ARG_CRIME_ID);
-                CheckinsLab crimeLab = CheckinsLab.get(getActivity());
-                mCheckins = crimeLab.getCrime(crimeId);
-                crimeLab.deleteCrime(mCheckins);
-                getActivity().finish();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }*/
-    /** @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-    super.onCreateOptionsMenu(menu, inflater);
-    inflater.inflate(R.menu.fragment_crime_delete, menu);
-    }
-
-     @Override
-     public boolean onOptionsItemSelected(MenuItem item) {
-     switch (item.getItemId()) {
-     case R.id.menu_item_delete_crime:
-
-     CheckinsLab.get(getActivity()).removeCrime(mCheckins);
-     //                Intent intent = new Intent(getActivity(), CheckinsListActivity.class);
-     //                startActivity(intent);
-     getActivity().finish();
-     return true;
-
-     default:
-     return super.onOptionsItemSelected(item);
-
-     }
-     } **/
-
-
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
