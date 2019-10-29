@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyCheckinsFinal</string>
+    <string name="app_name">MyCheckins</string>
     <string name="crime_title_hint">Enter a title for the checkins.</string>
     <string name="crime_title_label">Title</string>
     <string name="crime_details_hint">Enter details for the checkins.</string>
