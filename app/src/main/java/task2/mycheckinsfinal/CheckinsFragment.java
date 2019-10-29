@@ -422,24 +422,25 @@ public class CheckinsFragment extends Fragment {
     }
 
     private String getCrimeReport() {
-        String solvedString = null;
+        /**String solvedString = null;
         if (mCheckins.isSolved()){
             solvedString = getString(R.string.crime_report_solved);
         }else{
             solvedString = getString(R.string.crime_report_unsolved);
-        }
+        }**/
 
         String dateFormat = "EEE, MMM dd";
         String dateString = DateFormat.format(dateFormat, mCheckins.getDate()).toString();
 
-        String suspect = mCheckins.getSuspect();
+        /**String suspect = mCheckins.getSuspect();
         if (suspect == null) {
             suspect = getString(R.string.crime_report_no_suspect);
         }else{
             suspect = getString(R.string.crime_report_suspect, suspect);
-        }
+        }**/
 
-        String report = getString(R.string.crime_report, mCheckins.getTitle(), dateString, solvedString, suspect);
+        /**String report = getString(R.string.crime_report, mCheckins.getTitle(), dateString, solvedString, suspect);**/
+        String report = getString(R.string.crime_report, dateString, mCheckins.getTitle(), mCheckins.getPlace(), mCheckins.getDetails());
 
         return report;
     }
