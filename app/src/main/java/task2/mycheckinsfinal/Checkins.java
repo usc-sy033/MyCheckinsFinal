@@ -13,8 +13,6 @@ public class Checkins {
     private Double mLatitude;
     private Double mLongitude;
 
-    private boolean mSolved;
-    private String mSuspect;
 
     public Checkins() {
         this(UUID.randomUUID());
@@ -78,22 +76,6 @@ public class Checkins {
 
     public void setLongitude(Double longitude) {
         mLongitude = longitude;
-    }
-
-    public boolean isSolved() {
-        return mSolved;
-    }
-
-    public void setSolved(boolean solved) {
-        mSolved = solved;
-    }
-
-    public String getSuspect() {
-        return mSuspect;
-    }
-
-    public void setSuspect(String suspect) {
-        mSuspect = suspect;
     }
 
     public String getPhotoFilename() {

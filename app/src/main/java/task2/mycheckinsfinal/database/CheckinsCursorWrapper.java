@@ -19,8 +19,6 @@ public class CheckinsCursorWrapper extends CursorWrapper {
         long date = getLong(getColumnIndex(CrimeTable.Cols.DATE));
         String place = getString(getColumnIndex(CrimeTable.Cols.PlACE));
         String details = getString(getColumnIndex(CrimeTable.Cols.DETAILS));
-        int isSolved = getInt(getColumnIndex(CrimeTable.Cols.SOLVED));
-        String suspect = getString(getColumnIndex(CrimeTable.Cols.SUSPECT));
         Double latitude = getDouble(getColumnIndex(CrimeTable.Cols.LATITUDE));
         Double longitude = getDouble(getColumnIndex(CrimeTable.Cols.LONGITUDE));
 
@@ -29,8 +27,6 @@ public class CheckinsCursorWrapper extends CursorWrapper {
         checkins.setDate(new Date(date));
         checkins.setPlace(place);
         checkins.setDetails(details);
-        checkins.setSolved(isSolved != 0);
-        checkins.setSuspect(suspect);
         checkins.setLatitude(latitude);
         checkins.setLongitude(longitude);
 

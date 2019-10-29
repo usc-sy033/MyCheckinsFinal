@@ -54,7 +54,7 @@ public class CheckinsFragment extends Fragment {
     private EditText mPlaceField;
     private EditText mDetailsField;
 
-    private CheckBox mSolvedCheckBox;
+    /**private CheckBox mSolvedCheckBox;**/
     private Button mDeleteButton;
     private Button mSuspectButton;
     private Button mReportButton;
@@ -261,7 +261,7 @@ public class CheckinsFragment extends Fragment {
             }
         });
 
-        mSolvedCheckBox = (CheckBox)v.findViewById(R.id.crime_solved);
+       /** mSolvedCheckBox = (CheckBox)v.findViewById(R.id.crime_solved);
         mSolvedCheckBox.setChecked(mCheckins.isSolved());
         mSolvedCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -269,7 +269,7 @@ public class CheckinsFragment extends Fragment {
                 mCheckins.setSolved(isChecked);
             }
 
-        });
+        });**/
 
         mReportButton = (Button) v.findViewById(R.id.crime_report);
         mReportButton.setOnClickListener(new View.OnClickListener() {
@@ -314,7 +314,7 @@ public class CheckinsFragment extends Fragment {
         final Intent pickContact = new Intent(Intent.ACTION_PICK,
                 ContactsContract.Contacts.CONTENT_URI);
         //pickContact.addCategory(Intent.CATEGORY_HOME); **this was supposed to grey out the choose suspect button**
-        mSuspectButton = (Button) v.findViewById(R.id.crime_suspect);
+        /**mSuspectButton = (Button) v.findViewById(R.id.crime_suspect);
         mSuspectButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivityForResult(pickContact, REQUEST_CONTACT);
@@ -322,7 +322,7 @@ public class CheckinsFragment extends Fragment {
         });
         if (mCheckins.getSuspect() != null) {
             mSuspectButton.setText(mCheckins.getSuspect());
-        }
+        }**/
 
 
         return v;
@@ -340,7 +340,7 @@ public class CheckinsFragment extends Fragment {
                     .getSerializableExtra(DatePickerFragment.EXTRA_DATE);
             mCheckins.setDate(date);
             updateDate();
-        } else if (requestCode == REQUEST_CONTACT && data != null) {
+        } /**else if (requestCode == REQUEST_CONTACT && data != null) {
             Uri contactUri = data.getData();
 // Specify which fields you want your query to return
 // values for
@@ -365,7 +365,7 @@ public class CheckinsFragment extends Fragment {
             } finally {
                 c.close();
             }
-        } else if (requestCode == REQUEST_PHOTO) {
+        }**/ else if (requestCode == REQUEST_PHOTO) {
             Uri uri = FileProvider.getUriForFile(getActivity(),
                     "task2.mycheckinsfinal.fileprovider",
                     mPhotoFile);
@@ -383,24 +383,11 @@ public class CheckinsFragment extends Fragment {
     }
 
     private String getCrimeReport() {
-        /**String solvedString = null;
-        if (mCheckins.isSolved()){
-            solvedString = getString(R.string.crime_report_solved);
-        }else{
-            solvedString = getString(R.string.crime_report_unsolved);
-        }**/
 
         String dateFormat = "EEE, MMM dd";
         String dateString = DateFormat.format(dateFormat, mCheckins.getDate()).toString();
 
-        /**String suspect = mCheckins.getSuspect();
-        if (suspect == null) {
-            suspect = getString(R.string.crime_report_no_suspect);
-        }else{
-            suspect = getString(R.string.crime_report_suspect, suspect);
-        }**/
 
-        /**String report = getString(R.string.crime_report, mCheckins.getTitle(), dateString, solvedString, suspect);**/
         String report = getString(R.string.crime_report, dateString, mCheckins.getTitle(), mCheckins.getPlace(), mCheckins.getDetails());
 
         return report;

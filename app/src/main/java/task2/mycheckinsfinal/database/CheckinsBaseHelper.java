@@ -25,8 +25,6 @@ public class CheckinsBaseHelper extends SQLiteOpenHelper {
                 CrimeTable.Cols.DATE + ", " +
                 CrimeTable.Cols.PlACE + ", " +
                 CrimeTable.Cols.DETAILS + ", " +
-                CrimeTable.Cols.SOLVED + ", " +
-                CrimeTable.Cols.SUSPECT + ", " +
                 CrimeTable.Cols.LONGITUDE + "," +
                 CrimeTable.Cols.LATITUDE +
                 ")"

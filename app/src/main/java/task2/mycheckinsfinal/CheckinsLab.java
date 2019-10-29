@@ -35,13 +35,7 @@ public class CheckinsLab {
         mContext = context.getApplicationContext();
         mDatabase = new CheckinsBaseHelper(mContext)
                 .getWritableDatabase();
-        //mCheckins = new ArrayList<>();
-        /*for (int i = 0; i < 100; i++) {
-            Checkins crime = new Checkins();
-            crime.setTitle("Checkins #" + i);
-            crime.setSolved(i % 2 == 0); // every other one
-            mCheckins.add(crime);
-        }*/
+
 
     }
 
@@ -137,14 +131,11 @@ public class CheckinsLab {
 
     private static ContentValues getContentValues(Checkins checkins) {
         ContentValues values = new ContentValues();
-        //values.put(CrimeTable.Cols.UUID, checkins.getId().toString());
         values.put(CrimeTable.Cols.UUID, checkins.getId().toString());
         values.put(CrimeTable.Cols.TITLE, checkins.getTitle());
         values.put(CrimeTable.Cols.DATE, checkins.getDate().getTime());
         values.put(CrimeTable.Cols.PlACE, checkins.getPlace());
         values.put(CrimeTable.Cols.DETAILS, checkins.getDetails());
-        values.put(CrimeTable.Cols.SOLVED, checkins.isSolved() ? 1 : 0);
-        values.put(CrimeTable.Cols.SUSPECT, checkins.getSuspect());
         values.put(CrimeTable.Cols.LONGITUDE, checkins.getLongitude());
         values.put(CrimeTable.Cols.LATITUDE, checkins.getLatitude());
 

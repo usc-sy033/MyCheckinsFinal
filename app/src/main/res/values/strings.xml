@@ -7,24 +7,17 @@
     <string name="crime_place_hint">Enter a place for the checkins.</string>
     <string name="crime_place_label">Place</string>
 
-    <string name="crime_solved_label">Solved</string>
+
     <string name="date_picker_title">Date of checkins:</string>
     <string name="new_crime">New Checkins</string>
     <string name="show_subtitle">Show Subtitle</string>
     <string name="hide_subtitle">Hide Subtitle</string>
     <string name="subtitle_format">%1$d checkins</string>
-    <string name="crime_suspect_text">Choose Suspect</string>
     <string name="crime_report_text">Share</string>
     <string name="crime_report">At %1$s, I visited %2$s at %3$s. %4$s
 
-    <!--<string name="crime_report">%1$s!
- The checkins was discovered on %2$s. %3$s, and %4$s-->
 
  </string>
-    <string name="crime_report_solved">The case is solved</string>
-    <string name="crime_report_unsolved">The case is not solved</string>
-    <string name="crime_report_no_suspect">there is no suspect.</string>
-    <string name="crime_report_suspect">the suspect is %s.</string>
     <string name="crime_report_subject">CriminalIntent Checkins Report</string>
     <string name="send_report">Send checkins report via</string>
     <string name="delete_crime">Delete Checkins</string>

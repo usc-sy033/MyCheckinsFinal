@@ -136,7 +136,7 @@ public class CheckinsListFragment extends Fragment{
         private TextView mDateTextView;
         private TextView mPlaceTextView;
         private Checkins mCheckins;
-        private ImageView mSolvedImageView;
+
 
 
         public CrimeHolder(LayoutInflater inflater, ViewGroup parent) {
@@ -146,7 +146,7 @@ public class CheckinsListFragment extends Fragment{
             mTitleTextView = (TextView) itemView.findViewById(R.id.crime_title);
             mDateTextView = (TextView) itemView.findViewById(R.id.crime_date);
             mPlaceTextView = (TextView) itemView.findViewById(R.id.crime_place);
-            mSolvedImageView = (ImageView) itemView.findViewById(R.id.crime_solved);
+
         }
 
         public void bind(Checkins checkins) {
@@ -154,7 +154,7 @@ public class CheckinsListFragment extends Fragment{
             mTitleTextView.setText(mCheckins.getTitle());
             mDateTextView.setText(mCheckins.getDate().toString());
             mPlaceTextView.setText(mCheckins.getPlace());
-            mSolvedImageView.setVisibility(checkins.isSolved() ? View.VISIBLE : View.GONE);
+
         }
 
         @Override
